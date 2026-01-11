@@ -12,8 +12,8 @@ The easiest and fastest way to install the bot is by using the [official Discord
 </div>
 
 ### Contributors
-<a href="https://github.com/Girls-Network/GayBot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Girls-Network/GayBot" />
+<a href="https://github.com/Girls-Network/GayBot-v2/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Girls-Network/GayBot-v2" />
 </a>
 
 ## 📜 Important Documents
