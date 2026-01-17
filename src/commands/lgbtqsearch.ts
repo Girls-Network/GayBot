@@ -133,7 +133,7 @@ export default {
             replyEmbed = new EmbedBuilder()
                 .setColor(0xED4245)
                 .setTitle('Term Not Found 🔎')
-                .setDescription(`Could not find a definition for **"${searchTerm}"** in the database. Please try a different spelling or a more general term.`)
+                .setDescription(`Could not find a definition for **"${searchTerm}"** in the database. Missing information? Open an issue on our [github](https://github.com/Girls-Network/LGBT-API/issues)`)
                 .setFooter({ text: `API Source: girlsnetwork.dev` });
 
             if (targetMember) {
