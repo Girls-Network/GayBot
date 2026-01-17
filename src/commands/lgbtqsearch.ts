@@ -40,10 +40,6 @@ async function searchLgbtqTerm(term: string): Promise<ApiResponse | null> {
     const apiBase = 'https://api.girlsnetwork.dev';
     const apiURL = `${apiBase}/api/${encodeURIComponent(normalizedTerm)}`;
 
-    console.log(`[LGBTQ Search] Original term: "${term}"`);
-    console.log(`[LGBTQ Search] Normalized term: "${normalizedTerm}"`);
-    console.log(`[LGBTQ Search] API URL: ${apiURL}`);
-
     try {
         const response = await fetch(apiURL, {
             method: 'GET',
@@ -52,7 +48,6 @@ async function searchLgbtqTerm(term: string): Promise<ApiResponse | null> {
             },
         });
         
-        console.log(`[LGBTQ Search] Response status: ${response.status}`);
         
         if (!response.ok) {
             // API returns 404 if not found
@@ -65,12 +60,8 @@ async function searchLgbtqTerm(term: string): Promise<ApiResponse | null> {
             console.log(`[LGBTQ Search] Error response: ${errorText}`);
             return null;
         }
-
         const rawText = await response.text();
-        console.log(`[LGBTQ Search] Raw response: ${rawText}`);
-        
         const data: ApiResponse = JSON.parse(rawText) as ApiResponse;
-        console.log(`[LGBTQ Search] Success! Type: ${data.type}`);
 
         return data;
     } catch (error) {
