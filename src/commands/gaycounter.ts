@@ -36,20 +36,21 @@ export default {
                 type: ApplicationCommandOptionType.User,
                 name: 'target',
                 description: 'The user to check.',
-                required: true
+                required: false // Changed to false
             }
         ],
     },
-
     async execute(interaction: CommandInteraction, client: any) {
         if (!interaction.isChatInputCommand()) return;
 
-        const targetUser = interaction.options.getUser('target', true);
+        // Get target user or default to command user
+        const targetUser = interaction.options.getUser('target') || interaction.user;
+
         await interaction.deferReply();
 
         const gayness = calculateGayness(targetUser.id);
-        let message = '';
 
+        let message = '';
         if (gayness < 20) {
             message = `**${targetUser.username}** is **${gayness}% gay**! Keep shining! 🌈`;
         } else if (gayness <= 80) {
