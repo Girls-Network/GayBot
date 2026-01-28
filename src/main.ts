@@ -65,7 +65,7 @@ async function start() {
     await loadCommands(client);
     await loadEvents();
     await deployCommands(client);    
-    await client.login(process.env.BOT_TOKEN);
+    await client.login(process.env.GAYBOT_TOKEN);
     }
 
 start();

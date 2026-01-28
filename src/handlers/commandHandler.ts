@@ -31,9 +31,9 @@ export async function loadCommands(client: ExtendedClient): Promise<void> {
 }
 
 export async function deployCommands(client: ExtendedClient): Promise<void> {
-    const TOKEN = process.env.BOT_TOKEN;
-    const CLIENT_ID = process.env.CLIENT_ID;
-    const GUILD_ID = process.env.GUILD_ID;
+    const TOKEN = process.env.GAYBOT_TOKEN;
+    const CLIENT_ID = process.env.GAYBOT_CLIENT_ID;
+    const GUILD_ID = process.env.GAYBOT_GUILD_ID;
 
     if (!CLIENT_ID || !TOKEN) {
         logError(new Error('Missing CLIENT_ID or BOT_TOKEN'), 'Commands');
