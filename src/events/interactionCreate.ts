@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2026 Girls Network
+ * Licensed under the GN-NCSL-1.1 Licence.
+ * See LICENCE in the project root for full licence information.
+ */
+
 import { 
     Interaction, 
     EmbedBuilder, 
